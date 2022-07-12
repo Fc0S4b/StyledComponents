@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { colors } from '../utils';
 const ComplexTitle = ({ title, className }) => {
   // console.log(props); title and className, tienes que tener el parámetro de props
 
@@ -22,7 +22,8 @@ const Wrapper = styled(ComplexTitle)`
   .underline {
     width: 5rem;
     height: 0.25rem;
-    background: #645cff;
+    /* acceder a la variable con interpolación */
+    background: ${colors.primary};
     margin: 0 auto;
   }
 `;
