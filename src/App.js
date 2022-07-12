@@ -1,7 +1,7 @@
 // npm install styled-components
 import styled from 'styled-components';
 import BasicTitle from './components/BasicTitle';
-import { DefaultButton } from './components/Buttons';
+import { DefaultButton, HipsterButton } from './components/Buttons';
 // en html se escriben nombres únicos de clases generados por styled-components
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <BasicTitle special>style component</BasicTitle>
       <BasicTitle>style component</BasicTitle>
       <DefaultButton>click me</DefaultButton>
+      <HipsterButton>click me</HipsterButton>
     </div>
   );
 }
