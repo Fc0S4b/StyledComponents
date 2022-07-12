@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-// tagged template literal
 const BasicTitle = styled.h1`
-  //uppercase, import.htmlElement
   text-transform: capitalize;
   text-align: center;
+  color: ${(props) =>
+    props.special &&
+    'red'}; //usando prop con lógica para aplicarla al componente con special
 `;
 
 export default BasicTitle;
