@@ -12,6 +12,7 @@ const Card = () => {
         <h4>product name</h4>
         <p>$15</p>
       </footer>
+      {/* <h4>random stuff</h4> */}
     </StyledCard>
   );
 };
@@ -26,6 +27,24 @@ const StyledCard = styled.article`
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    h4 {
+      //more specific
+      text-transform: capitalize;
+    }
+    p {
+      color: var(--primary);
+      font-weight: 700;
+    }
+  }
+  //no mas de un nivel anidado por que se torna muy específico
+  /* h4 {
+    color: blue;
+  } */
 `;
 
 export default Card;
