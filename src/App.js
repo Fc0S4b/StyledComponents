@@ -1,16 +1,23 @@
 // npm install styled-components
 import styled from 'styled-components';
-import BasicTitle from './components/BasicTitle';
-import { DefaultButton, HipsterButton } from './components/Buttons';
-// en html se escriben nombres únicos de clases generados por styled-components
 
+import Button from '@mui/material/Button';
+
+// extend react component or with import { styled } from '@mui/material/styles' and the old syntax;
+const StyledBtn = styled(Button)`
+  && {
+    text-transform: capitalize;
+  }
+`;
 function App() {
   return (
     <div style={{ padding: '2rem' }}>
-      <BasicTitle special>style component</BasicTitle>
-      <BasicTitle>style component</BasicTitle>
-      <DefaultButton>click me</DefaultButton>
-      <HipsterButton>click me</HipsterButton>
+      <Button color="primary" variant="contained">
+        Hello World
+      </Button>
+      <StyledBtn color="primary" variant="contained">
+        Hello World
+      </StyledBtn>
     </div>
   );
 }
