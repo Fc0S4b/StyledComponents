@@ -1,10 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components/macro';
-// attrs es para manejar los atributos de los componentes, evitar repeticiones o hacer configuraciones generales
-// hacer con objetos hace que todos los botones por default sean de tipo button, para dejar que el btn del form sea submit, se debe hacer con funciones, esta reaccionará de acuerdo al type='submit' que pasa como props al componente
-// const Button = styled.button.attrs({
-//   type: 'button',
-// })...
+
 const Button = styled.button.attrs((props) => {
   return { type: props.type || 'button' };
 })`
@@ -13,6 +9,17 @@ const Button = styled.button.attrs((props) => {
   color: white;
   padding: 0.25rem;
   cursor: pointer;
+  ${({ type }) => {
+    return (
+      type === 'submit' &&
+      css`
+        display: block;
+        width: 100%;
+        margin-top: 1em;
+        border-radius: 0.25rem;
+      `
+    );
+  }}
 `;
 const Form = () => {
   return (
