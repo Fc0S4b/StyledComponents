@@ -45,15 +45,10 @@ const StyledCard = styled.article`
       color: var(--primary);
       font-weight: 700;
     }
-    /* & se aplica al contenedor en este caso al footer */
     &:hover {
       background: red;
     }
   }
-  /* footer:hover{
-    background: red;
-  } */
-  /* esto se aplicará al contenedor en general */
   transition: all 0.5s ease-in-out;
   &:hover {
     box-shadow: 0 3px 3px #222;
