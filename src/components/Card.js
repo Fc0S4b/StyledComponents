@@ -12,7 +12,6 @@ const Card = () => {
         <h4>product name</h4>
         <p>$15</p>
       </footer>
-      {/* <h4>random stuff</h4> */}
     </StyledCard>
   );
 };
@@ -33,18 +32,36 @@ const StyledCard = styled.article`
     align-items: center;
     padding: 0 2rem;
     h4 {
-      //more specific
       text-transform: capitalize;
+      &::before {
+        content: 'Name : ';
+        color: red;
+      }
+    }
+    h4:hover {
+      color: green;
     }
     p {
       color: var(--primary);
       font-weight: 700;
     }
+    /* & se aplica al contenedor en este caso al footer */
+    &:hover {
+      background: red;
+    }
   }
-  //no mas de un nivel anidado por que se torna muy específico
-  /* h4 {
-    color: blue;
+  /* footer:hover{
+    background: red;
   } */
+  /* esto se aplicará al contenedor en general */
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    box-shadow: 0 3px 3px #222;
+    cursor: pointer;
+  }
+  @media (min-width: 768px) {
+    max-width: 600px;
+  }
 `;
 
 export default Card;
