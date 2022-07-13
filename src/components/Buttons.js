@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const DefaultButton = styled.button`
   background: #645cff;
@@ -7,10 +7,23 @@ export const DefaultButton = styled.button`
   border-radius: 0.25rem;
   cursor: pointer;
   text-transform: capitalize;
-  padding: 0.25rem;
   display: block;
-  width: 200px;
   margin: 1rem auto;
+  ${({ large }) =>
+    large
+      ? css`
+          padding: 1rem;
+          font-size: 2.5rem;
+          font-weight: 700;
+        `
+      : css`
+          padding: 0.5rem;
+          font-size: 1rem;
+          font-weight: 400;
+        `}/* si tuviese que aplicar css con la condición de que sea hacia la prop de large, tendría que configurar uno por uno en modo de funciones: la solución simplificada está arriba de este comentario */
+        /* padding: ${({ large }) => large && '2rem'};
+  width: 200px;
+  font-weight: 400; */
 `;
 
 // extender clases de DefaultButton a nuevo componente HipsterButton que tiene otras propiedades adicionales
