@@ -21,6 +21,20 @@ const Button = styled.button.attrs((props) => {
     );
   }}
 `;
+
+const BasicInput = styled.input.attrs((props) => {
+  return {
+    type: props.type || 'text',
+    placeholder: props.placeholder || 'please enter value',
+  };
+})`
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 2px solid #f2f4f8;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-top: 1rem;
+`;
 const Form = () => {
   return (
     <div>
@@ -35,7 +49,10 @@ const Form = () => {
         `}
       >
         <h2>Form</h2>
-        <input type="text" />
+        <BasicInput />
+        <BasicInput />
+        <BasicInput />
+        <BasicInput type="email" placeholder="please enter email" />
         <Button type="submit">submit here</Button>
       </form>
     </div>
