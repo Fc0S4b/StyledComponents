@@ -1,10 +1,9 @@
-import styled from 'styled-components/macro';
-import { DefaultButton } from './components/Buttons';
+import styled from 'styled-components';
+import Form from './components/Form';
 function App() {
   return (
     <div style={{ padding: '2rem' }}>
-      <DefaultButton>click me</DefaultButton>
-      <DefaultButton large>click me</DefaultButton>
+      <Form />
     </div>
   );
 }
